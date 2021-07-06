@@ -1,4 +1,8 @@
-# TSDX React w/ Storybook User Guide
+# Components Library Purple Rain
+
+## Playground
+
+Check the storybook [Playground](https://pedrodias92.github.io/purple-rain)
 
 Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
 
