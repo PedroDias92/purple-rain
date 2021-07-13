@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: purple-rain-storybook
+  namespace: dev
+spec:
+  type: ClusterIP
+  selector:
+    app: purple-rain-storybook
+  ports:
+    - name: http
+      port: 8080

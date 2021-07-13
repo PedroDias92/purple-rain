@@ -1,0 +1,30 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: purple-rain-storybook
+  namespace: dev
+spec:
+  selector:
+    matchLabels:
+      app: purple-rain-storybook
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: purple-rain-storybook
+        version: 0.1.1
+    spec:
+      containers:
+        - name: purple-rain-storybook
+          image: acndevcluster.azurecr.io/purple-rain-storybook:0.0.1
+          resources:
+            requests:
+              memory: '256M'
+            limits:
+              memory: '512M'
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+      restartPolicy: Always
+      imagePullSecrets:
+        - name: pull-image-principal
