@@ -4,6 +4,23 @@
 
 Check the storybook [Playground](https://pedrodias92.github.io/purple-rain)
 
+## Connect locally with another app
+
+1. in purple-rain
+
+```bash
+npm link ../my-app/node_modules/react
+npm link
+npm start
+```
+
+2. in host (must be in the same folder!)
+
+```bash
+npm link purple-rain
+npm run dev (or start)
+```
+
 Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
 
 > This TSDX setup is meant for developing React component libraries (not apps!) that can be published to NPM. If you’re looking to build a React-based app, you should use `create-react-app`, `razzle`, `nextjs`, `gatsby`, or `react-static`.
